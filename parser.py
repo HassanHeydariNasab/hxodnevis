@@ -24,7 +24,7 @@ class MyHTMLParser(HTMLParser):
 	data_t = word_tokenize(data_d)
 	global word_list
 	for i in data_t:
-		word_list.append(i)	
+		word_list.append(i)
 		word_list.append(i)
 parser = MyHTMLParser()
 parser.feed(fr)
