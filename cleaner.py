@@ -10,5 +10,24 @@ class Word(Model):
 
     class Meta:
         database = db
-#db.create_tables([Word])
+Word.delete().where(Word.word1 == "PM").execute()
+Word.delete().where(Word.word1 == "AM").execute()
+Word.delete().where(Word.word1 == "،").execute()
+Word.delete().where(Word.word1 == ":").execute()
+Word.delete().where(Word.word1 == "«").execute()
+Word.delete().where(Word.word1 == "»").execute()
+Word.delete().where(Word.word1 == "(").execute()
+Word.delete().where(Word.word1 == ")").execute()
+Word.delete().where(Word.word1 == ">").execute()
+Word.delete().where(Word.word1 == "<").execute()
+Word.delete().where(Word.word1 == "]").execute()
+Word.delete().where(Word.word1 == "[").execute()
+Word.delete().where(Word.word1 == ".").execute()
+Word.delete().where(Word.word1 == "؛").execute()
+Word.delete().where(Word.word1 == "%htmlDTD;").execute()
+Word.delete().where(Word.word1 == "%feedDTD;").execute()
+Word.delete().where(Word.word1 == ";").execute()
+Word.delete().where(Word.word1.contains("2015")).execute()
+Word.delete().where(Word.word1.contains("/")).execute()
+db.close()
 
