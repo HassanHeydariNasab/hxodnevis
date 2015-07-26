@@ -1,47 +1,43 @@
 <div dir=rtl>
 #خودنویس  
-این یک اسکریپت پایتون است که می‌تواند به همراه gEdit استفاده شود .  
-هدف این پروژه‌ی سرگرم‌کننده ، پیشنهاد واژه‌های متداول پس از هر واژه است .  
+این یک اسکریپت پایتون است که می‌تواند به همراه gEdit استفاده شود .<br>
+هدف این پروژه‌ی سرگرم‌کننده ، پیشنهاد واژه‌های متداول پس از هر واژه است .<br>
 
 ##پیش‌نیازها  
-ماژول‌های پایتون :  
-peewee  
-bs4  
-hazm  
-دیگر پیش‌نیازها :  
-gxmessage  
+ماژول‌های پایتون :<br>
+peewee<br>
+bs4<br>
+hazm<br>
+دیگر پیش‌نیازها : <br>
+gxmessage<br>
 
 ##راهنما  
-این برنامه برای استخراج واژه‌ها از farsnews.com آزمایش شده است .مثال :  
-http://www.farsnews.com/newstext.php?nn=13940503000327  
-( هرگونه ارتباط این برنامه با فارس‌نیوز و یا هرکجای دیگر تکذیب می‌شود ! )  
-برای ایجاد پایگاه‌داده ، در پرونده‌ی parser.py ، خط  
+این برنامه برای استخراج واژه‌ها از farsnews.com آزمایش شده است .مثال : <br>
+http://www.farsnews.com/newstext.php?nn=13940503000327<br>
+( هرگونه ارتباط این برنامه با فارس‌نیوز و یا هرکجای دیگر تکذیب می‌شود ! )<br>
+برای ایجاد پایگاه‌داده ، در پرونده‌ی parser.py ، خط<br>
+</div>
+
+```python #db.create_tables([Word])```  
+
+<div dir=rtl>
+را به<br>
+</div>
+```python db.create_tables([Word])```  
+<div dir=rtl>
+تغییر دهید .<br>
+پرونده‌ی HTML مورد نظر را برای استخراج واژه‌ها ، به شکل زیر در parser.py ذکر کنید :<br>
 </div>
 <div dir=ltr>
-`#db.create_tables([Word])`  
+`f = open("html/f.html")`<br>
 </div>
 <div dir=rtl>
-را به  
+برای استفاده به همراه gEdit ، افزونه‌ی external tools را فعال کنید و یک ابزار جدید با اسکریپت زیر ایجاد کنید :<br>
 </div>
-<div dir=ltr>
-`db.create_tables([Word])`  
-</div>
-<div dir=rtl>
-تغییر دهید .  
-پرونده‌ی HTML مورد نظر را برای استخراج واژه‌ها ، به شکل زیر در parser.py ذکر کنید :  
-</div>
-<div dir=ltr>
-`f = open("html/f.html")`  
-</div>
-<div dir=rtl>
-برای استفاده به همراه gEdit ، افزونه‌ی external tools را فعال کنید و یک ابزار جدید با اسکریپت زیر ایجاد کنید :  
-</div>
-<div dir=ltr>
 ```bash
 #!/bin/sh
 python $HOME/hxodnevis/gedit_tool.py $GEDIT_CURRENT_WORD
-```  
-</div>
+```
 <div dir=rtl>
-میانبر مناسبی مانند = + CTRL  برای آن قرار دهید و Output را برابر Insert at cursor position قرار دهید .  
+میانبر مناسبی مانند = + CTRL  برای آن قرار دهید و Output را برابر Insert at cursor position قرار دهید .<br>
 </div>
